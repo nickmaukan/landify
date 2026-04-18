@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landify - Landing Pages Ecuador</title>
+    <meta name="description" content="Landify - Landing pages profesionales, modernos y optimizados para conversiones. Templates y diseños custom para tu negocio.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        
+        .gradient-mesh {
+            background: 
+                radial-gradient(at 40% 20%, hsla(180,90%,80%,0.3) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(280,90%,80%,0.2) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(200,90%,80%,0.2) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, hsla(320,90%,80%,0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(40,90%,80%,0.2) 0px, transparent 50%);
+        }
+        
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-hover:hover { transform: translateY(-8px) scale(1.01); }
+        
+        .glow { animation: glow 3s ease-in-out infinite alternate; }
+        @keyframes glow { from { box-shadow: 0 0 20px rgba(99,102,241,0.2); } to { box-shadow: 0 0 40px rgba(99,102,241,0.4); } }
+        
+        .float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        
+        .gradient-text { background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .pattern { background-image: radial-gradient(rgba(99,102,241,0.1) 1px, transparent 1px); background-size: 30px 30px; }
+    </style>
+</head>
+<body class="bg-brand-900 text-white">
+    <!-- Header -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0 gradient-mesh"></div>
+        <div class="absolute inset-0 pattern opacity-50"></div>
+        
+        <nav class="relative z-10 max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                    <i data-lucide="hexagon" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-heading font-bold text-xl">Landify</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#precios" class="text-sm text-brand-300 hover:text-white transition">Precios</a>
+                <a href="https://wa.me/593998815416" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 rounded-full font-medium transition backdrop-blur flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    Cotizar
+                </a>
+            </div>
+        </nav>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur mb-8">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-sm text-brand-200">Diseño web profesional en Ecuador</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6 leading-tight">
+                Landing Pages<br>
+                <span class="gradient-text">de Alto Impacto</span>
+            </h1>
+            
+            <p class="text-xl text-brand-300 max-w-2xl mx-auto mb-10">
+                Plantillas modernas + diseños custom. Tu presencia online que convierte visitantes en clientes.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#templates" class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full font-semibold hover:opacity-90 transition glow flex items-center gap-2">
+                    <i data-lucide="layout" class="w-5 h-5"></i>
+                    Ver Templates
+                </a>
+                <a href="#precios" class="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-full font-semibold transition backdrop-blur flex items-center gap-2">
+                    <i data-lucide="calculator" class="w-5 h-5"></i>
+                    Ver Precios
+                </a>
+            </div>
+            
+            <div class="flex items-center justify-center gap-6 mt-8 text-sm text-brand-300">
+                <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Mejor precio garantizado</span>
+                <span class="flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4 text-emerald-400"></i> Sin compromiso</span>
+                <span class="flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4 text-emerald-400"></i> Entrega en 24-48h</span>
+            </div>
+        </div>
+        
+        <div class="absolute top-1/4 left-10 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl float"></div>
+        <div class="absolute bottom-1/4 right-10 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl float" style="animation-delay: -2s;"></div>
+    </header>
+
+    <!-- Templates -->
+    <section id="templates" class="py-24 bg-brand-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-heading font-bold mb-4">Templates Disponibles</h2>
+                <p class="text-brand-300">6 diseños profesionales listos para usar</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Lead Capture -->
+                <div class="card-hover group relative bg-brand-700/50 rounded-3xl overflow-hidden border border-brand-600/30">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 pattern opacity-30"></div>
+                        <i data-lucide="target" class="w-20 h-20 text-indigo-400 relative z-10"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-700 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-medium mb-3">Más Popular</span>
+                        <h3 class="text-xl font-heading font-bold mb-2">Lead Capture</h3>
+                        <p class="text-brand-300 text-sm mb-4">Captura emails para webinars, ebooks y newsletters.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">$45</span>
+                            <div class="flex gap-2">
+                                <a href="01-lead-capture.html" target="_blank" class="px-3 py-1.5 bg-white/10 hover:bg-indigo-500 rounded-lg text-sm flex items-center gap-1 transition">
+                                    <i data-lucide="external-link" class="w-3 h-3"></i>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicios -->
+                <div class="card-hover group relative bg-brand-700/50 rounded-3xl overflow-hidden border border-brand-600/30">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="briefcase" class="w-20 h-20 text-violet-400 relative z-10"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-700 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold mb-2">Servicios Profesionales</h3>
+                        <p class="text-brand-300 text-sm mb-4">Para consultores, abogados, doctores y profesionales.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">$75</span>
+                            <a href="02-servicios.html" target="_blank" class="px-3 py-1.5 bg-white/10 hover:bg-violet-500 rounded-lg text-sm flex items-center gap-1 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurante -->
+                <div class="card-hover group relative bg-brand-700/50 rounded-3xl overflow-hidden border border-brand-600/30">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="utensils" class="w-20 h-20 text-amber-400 relative z-10"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-700 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-medium mb-3">Con Reserva</span>
+                        <h3 class="text-xl font-heading font-bold mb-2">Restaurante</h3>
+                        <p class="text-brand-300 text-sm mb-4">Menú, información y sistema de reservas.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">$65</span>
+                            <a href="03-restaurante.html" target="_blank" class="px-3 py-1.5 bg-white/10 hover:bg-amber-500 rounded-lg text-sm flex items-center gap-1 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portafolio -->
+                <div class="card-hover group relative bg-brand-700/50 rounded-3xl overflow-hidden border border-brand-600/30">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 pattern opacity-30"></div>
+                        <i data-lucide="palette" class="w-20 h-20 text-slate-400 relative z-10"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-700 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold mb-2">Portafolio Dark</h3>
+                        <p class="text-brand-300 text-sm mb-4">Para artistas, fotógrafos y diseñadores.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">$55</span>
+                            <a href="04-portafolio.html" target="_blank" class="px-3 py-1.5 bg-white/10 hover:bg-slate-500 rounded-lg text-sm flex items-center gap-1 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inmobiliario -->
+                <div class="card-hover group relative bg-brand-700/50 rounded-3xl overflow-hidden border border-brand-600/30">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="building-2" class="w-20 h-20 text-emerald-400 relative z-10"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-700 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-medium mb-3">Con Búsqueda</span>
+                        <h3 class="text-xl font-heading font-bold mb-2">Inmobiliario</h3>
+                        <p class="text-brand-300 text-sm mb-4">Listado de propiedades con filtros.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">$99</span>
+                            <a href="05-inmobiliario.html" target="_blank" class="px-3 py-1.5 bg-white/10 hover:bg-emerald-500 rounded-lg text-sm flex items-center gap-1 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Celulares Colombia -->
+                <div class="card-hover group relative bg-brand-700/50 rounded-3xl overflow-hidden border border-brand-600/30">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="smartphone" class="w-20 h-20 text-blue-400 relative z-10"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-700 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-medium mb-3">E-commerce</span>
+                        <h3 class="text-xl font-heading font-bold mb-2">Celulares Colombia</h3>
+                        <p class="text-brand-300 text-sm mb-4">Tienda online para tecnología y celulares.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">$150</span>
+                            <a href="06-celulares-colombia.html" target="_blank" class="px-3 py-1.5 bg-white/10 hover:bg-blue-500 rounded-lg text-sm flex items-center gap-1 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom -->
+                <div class="card-hover group relative bg-gradient-to-br from-brand-700 to-brand-800 rounded-3xl overflow-hidden border border-brand-500/30 flex flex-col items-center justify-center p-8 text-center">
+                    <i data-lucide="wand-2" class="w-16 h-16 text-brand-300 mb-4"></i>
+                    <h3 class="text-xl font-heading font-bold mb-2">Diseño Custom</h3>
+                    <p class="text-brand-300 text-sm mb-6">Creamos el diseño único para tu negocio.</p>
+                    <a href="https://wa.me/593998815416" class="px-6 py-3 bg-white text-brand-900 rounded-full font-semibold hover:bg-brand-100 transition flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Cotizar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precios -->
+    <section id="precios" class="py-24 bg-brand-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-medium mb-4">
+                    <i data-lucide="trophy" class="w-4 h-4"></i>
+                    Mejor precio del mercado
+                </span>
+                <h2 class="text-4xl font-heading font-bold mb-4">Precios Transparentes</h2>
+                <p class="text-brand-300">Si lo encuentras más barato, ¡te lo mejoramos! 🔥</p>
+            </div>
+            
+            <!-- Tabla de precios -->
+            <div class="bg-brand-800/50 rounded-3xl border border-brand-600/30 overflow-hidden mb-12">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-brand-700/50">
+                            <tr>
+                                <th class="px-6 py-4 text-left font-heading font-semibold">Servicio</th>
+                                <th class="px-6 py-4 text-left font-heading font-semibold">Tiempo</th>
+                                <th class="px-6 py-4 text-left font-heading font-semibold">Incluye</th>
+                                <th class="px-6 py-4 text-right font-heading font-semibold">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-brand-700/50">
+                            <tr>
+                                <td class="px-6 py-4">
+                                    <div class="font-semibold">Template Básico</div>
+                                    <div class="text-sm text-brand-400">Adaptación de template existente</div>
+                                </td>
+                                <td class="px-6 py-4 text-brand-300">1 hora</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm text-brand-400">Texto, imágenes, colores</div>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span class="text-2xl font-bold">$45</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">
+                                    <div class="font-semibold">Template Personalizado</div>
+                                    <div class="text-sm text-brand-400">Con modificaciones avanzadas</div>
+                                </td>
+                                <td class="px-6 py-4 text-brand-300">3 horas</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm text-brand-400">Cambios de diseño, secciones extra</div>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span class="text-2xl font-bold">$120</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">
+                                    <div class="font-semibold">Diseño Custom</div>
+                                    <div class="text-sm text-brand-400">Desde cero, único</div>
+                                </td>
+                                <td class="px-6 py-4 text-brand-300">8 horas</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm text-brand-400">UX research, prototipos, diseño único</div>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span class="text-2xl font-bold">$300</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">
+                                    <div class="font-semibold">E-commerce</div>
+                                    <div class="text-sm text-brand-400">Tienda online completa</div>
+                                </td>
+                                <td class="px-6 py-4 text-brand-300">16 horas</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm text-brand-400">Productos, pagos, inventario</div>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <span class="text-2xl font-bold">$600</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- No incluye -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-brand-800/30 rounded-2xl p-6 border border-brand-700/30">
+                    <h3 class="font-heading font-bold mb-4 flex items-center gap-2">
+                        <i data-lucide="x-circle" class="w-5 h-5 text-red-400"></i>
+                        No Incluye
+                    </h3>
+                    <ul class="space-y-3 text-brand-300">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1"></i>
+                            Dominio y hosting (cliente provee)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1"></i>
+                            Fotografías profesionales (stock básico incluido)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1"></i>
+                            copywriting (texto del cliente)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1"></i>
+                            Mantenimiento mensual
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1"></i>
+                            SEO avanzado o Google Ads
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-brand-800/30 rounded-2xl p-6 border border-brand-700/30">
+                    <h3 class="font-heading font-bold mb-4 flex items-center gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        Sí Incluye
+                    </h3>
+                    <ul class="space-y-3 text-brand-300">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1"></i>
+                            Diseño responsive (móvil y desktop)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1"></i>
+                            Formularios de contacto
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1"></i>
+                            Animaciones y transiciones
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1"></i>
+                            Optimización de velocidad
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-1"></i>
+                            2 rounds de revisiones
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extras -->
+    <section class="py-24 bg-brand-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-heading font-bold mb-4">Extras Disponibles</h2>
+                <p class="text-brand-300">Añade funcionalidades extra a tu proyecto</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <i data-lucide="mail" class="w-10 h-10 text-indigo-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Email Marketing</h4>
+                    <p class="text-brand-300 text-sm mb-3">Configuración de newsletter y automatizaciones</p>
+                    <p class="text-xl font-bold">+$50</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <i data-lucide="calendar" class="w-10 h-10 text-violet-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Sistema de Citas</h4>
+                    <p class="text-brand-300 text-sm mb-3">Booking online para servicios</p>
+                    <p class="text-xl font-bold">+$75</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <i data-lucide="bar-chart" class="w-10 h-10 text-emerald-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Analytics</h4>
+                    <p class="text-brand-300 text-sm mb-3">Dashboard con métricas y objetivos</p>
+                    <p class="text-xl font-bold">+$30</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <i data-lucide="languages" class="w-10 h-10 text-amber-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Multidioma</h4>
+                    <p class="text-brand-300 text-sm mb-3">Sitio en 2 idiomas</p>
+                    <p class="text-xl font-bold">+$100</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <i data-lucide="chat" class="w-10 h-10 text-pink-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Chat WhatsApp</h4>
+                    <p class="text-brand-300 text-sm mb-3">Botón flotante de contacto</p>
+                    <p class="text-xl font-bold">+$25</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <i data-lucide="clock" class="w-10 h-10 text-cyan-400 mb-4"></i>
+                    <h4 class="font-semibold mb-2">Mantenimiento</h4>
+                    <p class="text-brand-300 text-sm mb-3">Cambios mensuales, hosting</p>
+                    <p class="text-xl font-bold">$30/mes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-brand-800">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold mb-4">Preguntas Frecuentes</h2>
+                <p class="text-brand-300">Todo lo que necesitás saber</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <h3 class="font-semibold mb-2 flex items-center gap-2">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-indigo-400"></i>
+                        ¿Cuánto tiempo tardan en entregar?
+                    </h3>
+                    <p class="text-brand-300 text-sm">Los templates personalizados se entreg en 24-48 horas. Los diseños custom pueden tomar 3-5 días dependiendo de la complejidad.</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <h3 class="font-semibold mb-2 flex items-center gap-2">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-indigo-400"></i>
+                        ¿Qué incluye el precio?
+                    </h3>
+                    <p class="text-brand-300 text-sm">Diseño responsive, formularios de contacto, animaciones, optimización de velocidad y 2 rondas de revisiones. No incluye dominio, hosting ni copywriting.</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <h3 class="font-semibold mb-2 flex items-center gap-2">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-indigo-400"></i>
+                        ¿Puedo pedir revisiones?
+                    </h3>
+                    <p class="text-brand-300 text-sm">Sí, incluye 2 rondas de revisiones para asegurar que el resultado sea exactamente lo que necesitás.</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <h3 class="font-semibold mb-2 flex items-center gap-2">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-indigo-400"></i>
+                        ¿Qué pasa si no me gusta el resultado?
+                    </h3>
+                    <p class="text-brand-300 text-sm">Ofrecemos garantía de satisfacción. Si no estás feliz con el resultado, te devolvemos el dinero en los primeros 7 días.</p>
+                </div>
+                
+                <div class="bg-brand-700/30 rounded-xl p-6 border border-brand-600/30">
+                    <h3 class="font-semibold mb-2 flex items-center gap-2">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-indigo-400"></i>
+                        ¿Necesito proporcionar contenido?
+                    </h3>
+                    <p class="text-brand-300 text-sm">Sí, vos proporcionás el texto e imágenes. Nosotros nos encargamos del diseño y la implementación técnica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-24 bg-brand-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold mb-4">Qué dicen nuestros clientes</h2>
+                <p class="text-brand-300">Proyectos que hablan por nosotros</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brand-800/50 rounded-2xl p-6 border border-brand-700/30">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                    </div>
+                    <p class="text-brand-200 mb-4">"Excelente trabajo. La landing quedó mejor de lo que esperaba y el proceso fue muy fluido."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-indigo-500/30 flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Carlos M.</p>
+                            <p class="text-sm text-brand-400">Emprendedor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-brand-800/50 rounded-2xl p-6 border border-brand-700/30">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                    </div>
+                    <p class="text-brand-200 mb-4">"Rápidos y profesionales. La página de mi restaurante quedó perfecta y mis reservas aumentaron."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-violet-500/30 flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">María E.</p>
+                            <p class="text-sm text-brand-400">Restaurante</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-brand-800/50 rounded-2xl p-6 border border-brand-700/30">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-current"></i>
+                    </div>
+                    <p class="text-brand-200 mb-4">"Gran atención al cliente y precios justos. Ya les pedí otro proyecto."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Juan P.</p>
+                            <p class="text-sm text-brand-400">Abogado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-24 bg-brand-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-500/20 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="smartphone" class="w-7 h-7 text-indigo-400"></i>
+                    </div>
+                    <h4 class="font-semibold mb-1">Responsive</h4>
+                    <p class="text-brand-400 text-sm">Perfecto en móvil y desktop</p>
+                </div>
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="zap" class="w-7 h-7 text-purple-400"></i>
+                    </div>
+                    <h4 class="font-semibold mb-1">Rápido</h4>
+                    <p class="text-brand-400 text-sm">Carga en menos de 1 segundo</p>
+                </div>
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-pink-500/20 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="search" class="w-7 h-7 text-pink-400"></i>
+                    </div>
+                    <h4 class="font-semibold mb-1">SEO Basic</h4>
+                    <p class="text-brand-400 text-sm">Optimizado para Google</p>
+                </div>
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="headphones" class="w-7 h-7 text-emerald-400"></i>
+                    </div>
+                    <h4 class="font-semibold mb-1">Soporte</h4>
+                    <p class="text-brand-400 text-sm">30 días de soporte incluido</p>
+                </div>
+            </div>
+            
+            <!-- Trust badges -->
+            <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-brand-400">
+                <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Pago seguro</span>
+                <span class="flex items-center gap-2"><i data-lucide="rotate-ccw" class="w-4 h-4 text-emerald-400"></i> 2 revisiones incluidas</span>
+                <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-emerald-400"></i> Entrega en tiempo</span>
+                <span class="flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i> Responemos en 24h</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 rounded-full text-sm font-medium mb-6">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+                Oferta limitada
+            </div>
+            <h2 class="text-4xl font-heading font-bold mb-4">¿Listo para destacar?</h2>
+            <p class="text-white/80 mb-8 text-lg">Escríbenos y te ayudamos a crear la landing perfecta.</p>
+            <a href="https://wa.me/593998815416" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-900 rounded-full font-semibold hover:scale-105 transition">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Escribenos en WhatsApp
+            </a>
+            <div class="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm text-white/80">
+                <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4"></i> Garantía de satisfacción</span>
+                <span class="flex items-center gap-2"><i data-lucide="rotate-ccw" class="w-4 h-4"></i> 7 días para pedir reembolso</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-brand-950 border-t border-brand-800">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                    <i data-lucide="hexagon" class="w-4 h-4 text-white"></i>
+                </div>
+                <span class="font-heading font-bold">Landify</span>
+            </div>
+            <p class="text-brand-400 text-sm">© 2026 Todos los derechos reservados.</p>
+            <p class="text-brand-500 text-xs mt-2">Quito, Ecuador</p>
+            
+            <!-- Redes sociales -->
+            <div class="flex justify-center gap-4 mt-6">
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-800 hover:bg-indigo-500 flex items-center justify-center transition">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-800 hover:bg-indigo-500 flex items-center justify-center transition">
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-800 hover:bg-indigo-500 flex items-center justify-center transition">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-brand-800 hover:bg-indigo-500 flex items-center justify-center transition">
+                    <i data-lucide="twitter" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
