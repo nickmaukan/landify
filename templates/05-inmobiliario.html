@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliario | Entramados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                    <i data-lucide="home" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-heading text-2xl font-bold">Inm<span class="text-emerald-600">uevos</span></span>
+            </div>
+            <div class="hidden md:flex gap-8">
+                <a href="#propiedades" class="text-gray-600 hover:text-emerald-600">Propiedades</a>
+                <a href="#servicios" class="text-gray-600 hover:text-emerald-600">Servicios</a>
+                <a href="#contacto" class="px-5 py-2.5 bg-emerald-600 text-white rounded-full font-medium hover:bg-emerald-700 transition">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-emerald-400 font-medium mb-4 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        INMOBILIARIA ECUADOR
+                    </p>
+                    <h1 class="font-heading text-5xl font-bold mb-6">Encuentra el<br>hogar de tus<span class="text-emerald-400"> sueños</span></h1>
+                    <p class="text-gray-300 text-lg mb-8">Más de 500 propiedades disponibles en las mejores zonas de Ecuador. Te ayudamos a encontrar el lugar perfecto.</p>
+                    
+                    <form class="bg-white rounded-2xl p-4 flex flex-col md:flex-row gap-2">
+                        <div class="flex-1">
+                            <input type="text" placeholder="Ciudad, zona o palabra clave" class="w-full px-4 py-3 rounded-xl text-gray-800">
+                        </div>
+                        <select class="px-4 py-3 rounded-xl text-gray-800 border h-full">
+                            <option>Comprar</option>
+                            <option>Rentar</option>
+                        </select>
+                        <button type="button" class="px-6 py-3 bg-emerald-600 text-white rounded-xl font-medium hover:bg-emerald-700 flex items-center justify-center gap-2">
+                            <i data-lucide="search" class="w-5 h-5"></i>
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="aspect-square bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="building-2" class="w-24 h-24 text-white/70"></i>
+                    </div>
+                    <div class="aspect-square bg-gradient-to-br from-slate-600 to-slate-800 rounded-2xl flex items-center justify-center mt-8">
+                        <i data-lucide="apartment" class="w-24 h-24 text-white/70"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propiedades -->
+    <section id="propiedades" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="font-heading text-4xl font-bold text-center mb-4">Propiedades Destacadas</h2>
+            <p class="text-gray-600 text-center mb-12">Las mejores ofertas del mercado</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
+                    <div class="aspect-video bg-gradient-to-br from-emerald-200 to-emerald-400 flex items-center justify-center relative">
+                        <i data-lucide="building" class="w-24 h-24 text-white/50"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-600 text-white rounded-full text-sm font-medium">En venta</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-semibold mb-2">Casa en Valle de los Chillos</h3>
+                        <p class="text-gray-500 text-sm mb-3 flex items-center gap-1">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            Valle de los Chillos, Quito
+                        </p>
+                        <div class="flex gap-4 text-gray-600 text-sm mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 4</span>
+                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 3</span>
+                            <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-4 h-4"></i> 250m²</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-emerald-600">$185,000</span>
+                            <button class="text-emerald-600 font-medium hover:underline flex items-center gap-1">
+                                Ver <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
+                    <div class="aspect-video bg-gradient-to-br from-blue-200 to-blue-400 flex items-center justify-center relative">
+                        <i data-lucide="building-2" class="w-24 h-24 text-white/50"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium">En renta</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-semibold mb-2">Departamento en Via al Valle</h3>
+                        <p class="text-gray-500 text-sm mb-3 flex items-center gap-1">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            Via al Valle, Guayaquil
+                        </p>
+                        <div class="flex gap-4 text-gray-600 text-sm mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> 2</span>
+                            <span class="flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> 2</span>
+                            <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-4 h-4"></i> 120m²</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-emerald-600">$1,200/mes</span>
+                            <button class="text-emerald-600 font-medium hover:underline flex items-center gap-1">
+                                Ver <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
+                    <div class="aspect-video bg-gradient-to-br from-amber-200 to-orange-400 flex items-center justify-center relative">
+                        <i data-lucide="land-plot" class="w-24 h-24 text-white/50"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-600 text-white rounded-full text-sm font-medium">En venta</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-semibold mb-2">Terreno en Cumbayá</h3>
+                        <p class="text-gray-500 text-sm mb-3 flex items-center gap-1">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            Cumbayá, Quito
+                        </p>
+                        <div class="flex gap-4 text-gray-600 text-sm mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-4 h-4"></i> 1000m²</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-emerald-600">$450,000</span>
+                            <button class="text-emerald-600 font-medium hover:underline flex items-center gap-1">
+                                Ver <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="font-heading text-4xl font-bold text-center mb-12">Nuestros Servicios</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="key" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Venta</h3>
+                    <p class="text-gray-600 text-sm">Encuentra tu propiedad ideal</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="door-open" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Renta</h3>
+                    <p class="text-gray-600 text-sm">Las mejores propiedades en alquiler</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="calculator" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Tasaciones</h3>
+                    <p class="text-gray-600 text-sm">Valoración profesional</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Asesoría Legal</h3>
+                    <p class="text-gray-600 text-sm">Trámites y documentación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-emerald-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-heading text-4xl font-bold mb-4">Encuentra tu propiedad ideal</h2>
+            <p class="text-emerald-200 mb-8">Escríbenos y un asesor te contactará en breve</p>
+            
+            <form class="max-w-lg mx-auto space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Tu nombre" class="px-4 py-3 rounded-xl text-gray-800">
+                    <input type="tel" placeholder="Tu teléfono" class="px-4 py-3 rounded-xl text-gray-800">
+                </div>
+                <input type="email" placeholder="Tu email" class="w-full px-4 py-3 rounded-xl text-gray-800">
+                <select class="w-full px-4 py-3 rounded-xl text-gray-800">
+                    <option>Estoy interesado en comprar</option>
+                    <option>Estoy interesado en rentar</option>
+                    <option>Quiero vender mi propiedad</option>
+                    <option>Otro</option>
+                </select>
+                <textarea placeholder="¿Qué tipo de propiedad buscas?" rows="3" class="w-full px-4 py-3 rounded-xl text-gray-800"></textarea>
+                <button type="button" class="w-full py-4 bg-emerald-500 text-white rounded-xl font-semibold hover:bg-emerald-400 transition flex items-center justify-center gap-2">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400 text-center">
+        <div class="flex items-center justify-center gap-3 mb-4">
+            <i data-lucide="home" class="w-6 h-6 text-emerald-500"></i>
+            <span class="font-heading text-xl font-bold text-white">Inmuevos</span>
+        </div>
+        <p>© 2026 Inmuevos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
