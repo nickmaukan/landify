@@ -1,0 +1,82 @@
+---
+const services = [
+    {
+        icon: '👶',
+        title: 'Control del Niño Sano',
+        description: 'Seguimiento del crecimiento y desarrollo de tu hijo. Vacunas, mediciones y orientación para padres.',
+        features: ['Curva de crecimiento', 'Esquema de vacunas', 'Orientación nutricional'],
+        gradient: 'from-teal-400 to-teal-200',
+        color: 'teal'
+    },
+    {
+        icon: '💉',
+        title: 'Vacunación',
+        description: 'Esquema completo de vacunación infantil. Protege a tu hijo contra enfermedades prevenibles.',
+        features: ['Vacunas del MSP', 'Vacunas adicionales', 'Certificado de vacunación'],
+        gradient: 'from-pink-300 to-pink-200',
+        color: 'pink'
+    },
+    {
+        icon: '🤒',
+        title: 'Consulta por Enfermedad',
+        description: 'Diagnóstico y tratamiento de enfermedades comunes en niños. Fiebre, infecciones, alergias y más.',
+        features: ['Evaluación completa', 'Tratamiento personalizado', 'Seguimiento'],
+        gradient: 'from-amber-300 to-orange-200',
+        color: 'amber'
+    },
+    {
+        icon: '📹',
+        title: 'Teleconsulta',
+        description: 'Consulta virtual desde la comodidad de tu hogar. Ideal para seguimientos y consultas no urgentes.',
+        features: ['Videollamada con la Dra.', 'Receta electrónica', 'Sin salir de casa'],
+        gradient: 'from-blue-300 to-indigo-200',
+        color: 'blue'
+    },
+    {
+        icon: '🤱',
+        title: 'Asesoría de Lactancia',
+        description: 'Apoyo especializado para mamás lactantes. Técnicas, soluciones y acompañamiento en esta etapa.',
+        features: ['Técnicas de amamantamiento', 'Solución a problemas', 'Apoyo emocional'],
+        gradient: 'from-rose-300 to-pink-200',
+        color: 'rose'
+    },
+    {
+        icon: '📄',
+        title: 'Certificado Médico',
+        description: 'Certificados escolares, deportivos y para guardería. Evaluaciones rápidas y documentadas.',
+        features: ['Certificado escolar', 'Certificado deportivo', 'Para guardería'],
+        gradient: 'from-emerald-300 to-teal-200',
+        color: 'emerald'
+    }
+];
+---
+
+<section id="servicios" class="py-24 bg-white" aria-labelledby="services-heading">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="inline-block px-4 py-2 bg-teal-100 text-teal-600 rounded-full text-sm font-semibold mb-4">Servicios</span>
+            <h2 id="services-heading" class="text-4xl md:text-5xl font-bold mb-4">Atención integral para tu hijo</h2>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">Desde chequenios de rutina hasta enfermedades, estoy aquí para cuidar de tu pequeño con dedicación y cariño.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map(service => (
+                <article class="group bg-orange-50/50 rounded-3xl p-8 border border-transparent hover:border-teal-200/50 hover:shadow-xl transition-all">
+                    <div class={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition`} aria-hidden="true">
+                        <span class="text-3xl">{service.icon}</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">{service.title}</h3>
+                    <p class="text-slate-600 mb-4">{service.description}</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        {service.features.map(feature => (
+                            <li class="flex items-center gap-2">
+                                <span class={`text-${service.color}-500`}>✓</span>
+                                {feature}
+                            </li>
+                        ))}
+                    </ul>
+                </article>
+            ))}
+        </div>
+    </div>
+</section>

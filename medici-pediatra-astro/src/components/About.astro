@@ -1,0 +1,87 @@
+---
+const philosophy = [
+    {
+        number: '1',
+        title: 'Cada niño es diferente',
+        description: 'No hay fórmulas, cada atención se personaliza.'
+    },
+    {
+        number: '2',
+        title: 'Tiempo para escuchar',
+        description: 'Las mamás y papás tienen preguntas; les doy tiempo para responderlas.'
+    },
+    {
+        number: '3',
+        title: 'Actualización constante',
+        description: 'Siempre en formación para dar la mejor atención.'
+    }
+];
+---
+
+<section id="sobre-mi" class="py-24 bg-gradient-to-br from-teal-50/50 to-pink-50/30" aria-labelledby="about-heading">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                    <img 
+                        src="https://images.unsplash.com/photo-1594824476967-1c29cbf38e33?w=600&h=750&fit=crop" 
+                        alt="Dra. Carolinaidez en su consultorio en Quito" 
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        width="600"
+                        height="750"
+                    >
+                </div>
+                <!-- Credentials badge -->
+                <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-xl border border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-teal-600 flex items-center justify-center" aria-hidden="true">
+                            <span class="text-white text-xl" role="img">🎓</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-800">Universidad Central</p>
+                            <p class="text-sm text-slate-500">Facultad de Medicina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-8">
+                <div>
+                    <span class="inline-block px-4 py-2 bg-teal-100 text-teal-600 rounded-full text-sm font-semibold mb-4">Sobre Mí</span>
+                    <h2 id="about-heading" class="text-4xl md:text-5xl font-bold mb-6">Dra. Carolinaidez</h2>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-6">
+                        Desde que era niña, soñaba con ser doctora. Pero cuando nació mi sobrino y vi la mezcla de miedos y alegrías en mi hermana con un recién nacido, supe que mi lugar era auprès des enfants.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Hace más de <strong>12 años</strong> que acompaño a familias quiteñas en el cuidado de sus pequeños. Para mí, cada niño es único, y cada родители merece sentirse seguro con la atención que recibe.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
+                    <h4 class="font-bold text-lg mb-4">Mi filosofía de atención</h4>
+                    <ul class="space-y-3">
+                        {philosophy.map(item => (
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <span class="text-teal-600 text-sm font-semibold">{item.number}</span>
+                                </span>
+                                <div>
+                                    <strong class="text-slate-700">{item.title}</strong>
+                                    <span class="text-slate-500"> — {item.description}</span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                
+                <a href="https://wa.me/593998815416?text=Hola%20Dra.%20Carolinaidez,%20quisiera%20conocerla%20en%20una%20consulta" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700 transition">
+                    Conocer más sobre mi approach
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

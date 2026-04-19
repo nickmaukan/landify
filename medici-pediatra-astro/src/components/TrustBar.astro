@@ -1,0 +1,24 @@
+---
+const credentials = [
+    { icon: '🏆', label: '+12 años', sublabel: 'Experiencia' },
+    { icon: '📋', label: 'Universidad Central', sublabel: 'Medicina' },
+    { icon: '🩺', label: 'Especialización', sublabel: 'Pediatría y Puericultura' },
+    { icon: '💳', label: 'IESS + Seguros', sublabel: 'Particular también' }
+];
+---
+
+<section class="bg-white py-8 border-y border-slate-100" aria-label="Credenciales profesionales">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            {credentials.map(item => (
+                <div class="flex items-center gap-3">
+                    <span class="text-4xl" role="img" aria-hidden="true">{item.icon}</span>
+                    <div>
+                        <p class="font-bold text-slate-800">{item.label}</p>
+                        <p class="text-sm text-slate-500">{item.sublabel}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

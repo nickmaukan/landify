@@ -1,0 +1,73 @@
+---
+const testimonials = [
+    {
+        rating: 5,
+        text: "Mi hija le tiene miedo a los doctores, pero con la Dra. Carolinaidez es diferente. Siempre tiene paciencia y le explica todo con calma. Ahora hasta pregunta cuándo será la próxima cita.",
+        initials: 'MF',
+        gradient: 'from-pink-300 to-rose-400',
+        name: 'María Fernanda',
+        relation: 'Madre de Sofía, 5 años'
+    },
+    {
+        rating: 5,
+        text: "La teleconsulta fue un salvavidas cuando mi hijo tuvo fiebre en la noche. La Dra. me guió paso a paso y evitamos ir a emergencias. Es una doctora que de verdad se preocupa.",
+        initials: 'CR',
+        gradient: 'from-blue-300 to-indigo-400',
+        name: 'Carlos Rodríguez',
+        relation: 'Padre de Mateo, 2 años'
+    },
+    {
+        rating: 5,
+        text: "Desde que nació mi bebé, la Dra. Carolinaidez nos ha acompañado en todo. Sus consejos de lactancia fueron Gold. Ahora tengo un bebé sano y yo me siento segura como mamá.",
+        initials: 'AL',
+        gradient: 'from-emerald-300 to-teal-400',
+        name: 'Ana Lucía',
+        relation: 'Madre de Valentina, 8 meses'
+    }
+];
+---
+
+<section id="testimonios" class="py-24 bg-white" aria-labelledby="testimonials-heading">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold mb-4">Testimonios</span>
+            <h2 id="testimonials-heading" class="text-4xl md:text-5xl font-bold mb-4">Lo que dicen las familias</h2>
+            <p class="text-xl text-slate-600">Madres y padres que confían en la atención de la Dra. Carolinaidez</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            {testimonials.map((item, index) => (
+                <article class="bg-orange-50/50 rounded-2xl p-8 border border-slate-100">
+                    <div class="flex items-center gap-1 mb-4" role="img" aria-label={`${item.rating} estrellas`}>
+                        {[...Array(item.rating)].map(() => (
+                            <span class="text-amber-400 text-xl" aria-hidden="true">⭐</span>
+                        ))}
+                    </div>
+                    <blockquote>
+                        <p class="text-slate-600 mb-6 leading-relaxed">"{item.text}"</p>
+                    </blockquote>
+                    <footer class="flex items-center gap-3">
+                        <div class={`w-12 h-12 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center text-white font-bold`} aria-hidden="true">
+                            {item.initials}
+                        </div>
+                        <div>
+                            <cite class="font-semibold text-slate-800 not-italic">{item.name}</cite>
+                            <p class="text-sm text-slate-500">{item.relation}</p>
+                        </div>
+                    </footer>
+                </article>
+            ))}
+        </div>
+        
+        <!-- Google Reviews Badge -->
+        <div class="mt-12 text-center">
+            <div class="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-lg border border-slate-100">
+                <div class="flex items-center gap-1 text-amber-400 text-xl" role="img" aria-label="5 estrellas">
+                    <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                </div>
+                <span class="font-semibold text-slate-800">4.9</span>
+                <span class="text-slate-500">en Google Reviews</span>
+            </div>
+        </div>
+    </div>
+</section>
